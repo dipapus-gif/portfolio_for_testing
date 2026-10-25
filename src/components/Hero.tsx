@@ -28,7 +28,7 @@ export default function Hero() {
             Hi, I’m <span className="text-signal-400">{profile.short}</span>
           </h1>
           <p className="animate-fade-up anim-d1 mt-3 text-balance text-2xl font-bold leading-snug text-slate-200 sm:text-[1.9rem]">
-            SOC Analyst &amp; Pentester
+            Cybersecurity Analyst, Ethical Hacker &amp; AI Security Analyst
           </p>
           <p className="animate-fade-up anim-d2 mt-5 max-w-lg text-base leading-relaxed text-slate-400">
             AI-driven cybersecurity enthusiast working across IT/OT, SOC operations and offensive security. I
