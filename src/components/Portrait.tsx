@@ -31,7 +31,7 @@ export function HeroPhoto() {
             width={540}
             height={648}
             decoding="async"
-            className="h-full w-full object-cover object-[50%_35%]"
+            className="h-full w-full object-cover object-[50%_15%]"
           />
         ) : (
           <div aria-hidden className="h-full w-full bg-gradient-to-b from-signal-400/10 to-ink-850" />
