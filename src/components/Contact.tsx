@@ -1,6 +1,6 @@
 import { profile } from "../data/content";
 import { portraitSrc } from "./Portrait";
-import { ArrowUpRight, GithubIcon, LinkedinIcon } from "./Icons";
+import { ArrowUpRight, GithubIcon, LinkedinIcon, MailIcon } from "./Icons";
 
 export default function Contact() {
   return (
@@ -29,11 +29,26 @@ export default function Contact() {
           </h2>
           <p className="mt-5 text-base leading-relaxed text-slate-400 sm:text-lg">
             Hiring for a SOC or security team, working on detection or automation, or just want to compare lab
-            notes? LinkedIn is the best place to reach me — and my code lives on GitHub.
+            notes? email or LinkedIn is the best way to reach me — and my code lives on GitHub.
           </p>
         </div>
 
-        <div className="mx-auto mt-14 grid max-w-3xl gap-5 sm:grid-cols-2">
+        <div className="mx-auto mt-14 grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <a
+            href={`mailto:${profile.email}`}
+            className="group rounded-2xl border border-white/10 bg-ink-900/80 p-7 transition hover:-translate-y-0.5 hover:border-signal-500/50 hover:bg-ink-850"
+          >
+            <div className="flex items-start justify-between">
+              <span className="grid h-12 w-12 place-items-center rounded-xl bg-signal-400/10 text-signal-400 ring-1 ring-inset ring-signal-500/30">
+                <MailIcon className="h-6 w-6" />
+              </span>
+              <ArrowUpRight className="h-5 w-5 text-slate-500 transition group-hover:text-signal-300" />
+            </div>
+            <h3 className="mt-6 font-display text-lg font-semibold text-white">Email</h3>
+            <p className="mt-1 text-sm text-slate-400">Opportunities, collaboration and questions.</p>
+            <p className="mt-4 break-all font-mono text-xs text-signal-400">{profile.email}</p>
+          </a>
+
           <a
             href={profile.linkedin}
             target="_blank"
@@ -48,7 +63,7 @@ export default function Contact() {
             </div>
             <h3 className="mt-6 font-display text-lg font-semibold text-white">LinkedIn</h3>
             <p className="mt-1 text-sm text-slate-400">Experience, background and direct messages.</p>
-            <p className="mt-4 break-all font-mono text-xs text-signal-400">in/pascal-anorue</p>
+            <p className="mt-4 break-all font-mono text-xs text-signal-400">in/pascal-anorue-840465375</p>
           </a>
 
           <a

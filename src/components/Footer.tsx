@@ -1,5 +1,5 @@
 import { profile } from "../data/content";
-import { GithubIcon, LinkedinIcon } from "./Icons";
+import { GithubIcon, LinkedinIcon, MailIcon } from "./Icons";
 
 export default function Footer() {
   return (
@@ -16,6 +16,13 @@ export default function Footer() {
             className="font-mono text-xs text-slate-500 transition hover:text-signal-300"
           >
             back to top ↑
+          </a>
+          <a
+            href={`mailto:${profile.email}`}
+            aria-label="Email"
+            className="text-slate-500 transition hover:text-white"
+          >
+            <MailIcon className="h-[18px] w-[18px]" />
           </a>
           <a
             href={profile.github}

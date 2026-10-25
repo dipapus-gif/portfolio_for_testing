@@ -1,8 +1,9 @@
 import { profile } from "../data/content";
 import { HeroPhoto } from "./Portrait";
-import { GithubIcon, LinkedinIcon, ShieldIcon } from "./Icons";
+import { GithubIcon, LinkedinIcon, MailIcon, ShieldIcon } from "./Icons";
 
 const socials = [
+  { href: `mailto:${profile.email}`, label: "Email", Icon: MailIcon },
   { href: profile.linkedin, label: "LinkedIn", Icon: LinkedinIcon },
   { href: profile.github, label: "GitHub", Icon: GithubIcon },
   { href: profile.sentinel, label: "SOC Sentinel (live site)", Icon: ShieldIcon },
@@ -56,7 +57,7 @@ export default function Hero() {
               <li key={label}>
                 <a
                   href={href}
-                  target="_blank"
+                  target={href.startsWith("http") ? "_blank" : undefined}
                   rel="noreferrer"
                   aria-label={label}
                   title={label}
